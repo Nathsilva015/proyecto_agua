@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Registros de Captación y Consumo</h2>
+
+<table border="1">
+  <tr>
+    <th>Fecha</th>
+    <th>Captada (L)</th>
+    <th>Consumida (L)</th>
+    <th>Observaciones</th>
+  </tr>
+  {% for r in registros %}
+  <tr>
+    <td>{{ r.fecha }}</td>
+    <td>{{ r.captada }}</td>
+    <td>{{ r.consumida }}</td>
+    <td>{{ r.observaciones }}</td>
+  </tr>
+  {% endfor %}
+</table>
+
+<!-- 👇 Gráfica -->
+<h3>Gráfica de Consumo vs Captación</h3>
+<canvas id="graficoAgua" width="600" height="300"></canvas>
+
+<!-- Librería Chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<!-- ✅ SCRIPT SI
+

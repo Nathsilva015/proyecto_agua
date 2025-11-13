@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Gestión del Agua</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header><h1>💧 Plataforma de Gestión de Agua Lluvia</h1></header>
+    <nav>
+        <a href="{{ url_for('index') }}">Inicio</a>
+        <a href="{{ url_for('registro') }}">Registrar</a>
+    </nav>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+   
+</body>
+</html>

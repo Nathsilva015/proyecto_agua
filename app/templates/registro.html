@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Nuevo Registro</h2>
+<form method="POST">
+  <label>Agua captada (L):</label>
+  <input type="number" step="0.1" name="captada" required><br>
+
+  <label>Agua consumida (L):</label>
+  <input type="number" step="0.1" name="consumida" required><br>
+
+  <label>Observaciones:</label>
+  <input type="text" name="observaciones"><br>
+
+  <button type="submit">Guardar</button>
+</form>
+{% endblock %}
